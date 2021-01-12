@@ -3,6 +3,8 @@
 This project was assigned to me by WarnerMedia for a job interview. 
 I was given 24 hours to complete the project after I received it.
 
+the site is hosted at https://wmchallenge.jordanrivers.net/
+
 ## Project Requirements:
 
 * Display a web page that allow a user to:
