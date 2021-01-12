@@ -12,11 +12,13 @@ export default function Home(){
     const [accountStatus, changeStatus] = useState(false)
 
     return (
-        <div>
+        <div className="home">
             {!accountStatus ? <CreateUserForm changeStatus={changeStatus}/> : null}
             {Object.keys(user).length === 0  && accountStatus ? <UserForm changeStatus={changeStatus}/> : null}
             {Object.keys(user).length !== 0  && accountStatus ? <MovieForm /> : null}
-            {movies.length > 0 ? movies.map((movie, idx) => <Movie key={idx} movie={movie}/>) : null}
+            <div className="movies">
+                {movies.length > 0 ? movies.map((movie, idx) => <Movie key={idx} movie={movie}/>) : null}
+            </div>
         </div>
     )
 }
