@@ -1,6 +1,7 @@
 # WarnerMedia Developer Challenge
 
-This project was assigned to me by WarnerMedia for a job interview. I was given 24 hours to complete the project after I received it.
+This project was assigned to me by WarnerMedia for a job interview. 
+I was given 24 hours to complete the project after I received it.
 
 ## Project Requirements:
 
