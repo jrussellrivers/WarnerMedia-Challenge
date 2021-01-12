@@ -3,8 +3,6 @@ import Genre from './Genre'
 import Modal from 'react-modal'
 import baseImage from '../No_image_available_400_x_600.svg.png'
 
-// Modal.setAppElement('#container')
-
 export default function Movie({movie}){
 
     const [modalIsOpen,setIsOpen] = React.useState(false);

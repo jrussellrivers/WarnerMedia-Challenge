@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-    <div id="App" className="App">
+    <div className="App">
       <Provider store={store}>
         <Home />
       </Provider>
