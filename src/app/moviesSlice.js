@@ -13,10 +13,10 @@ export const fetchMoviesByName = createAsyncThunk('movies/fetchMoviesByName', as
         console.error(err);
     });
 
-    let movies = []
+    let newMovies = []
 
-    firstResponse.movie_results.forEach(async movie => {
-        let result = fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movie-details&imdb=${movie.imdb_id}`, {
+    for (let i = 0; i < firstResponse.movie_results.length; i++) {
+        let result = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movie-details&imdb=${firstResponse.movie_results[i].imdb_id}`, {
             "method": "GET",
             "headers": {
                 "x-rapidapi-key": "6c47160dd6msh909840b92fd1877p146dfdjsn837a6d851c44",
@@ -27,9 +27,11 @@ export const fetchMoviesByName = createAsyncThunk('movies/fetchMoviesByName', as
         .catch(err => {
             console.error(err);
         });
-    });
+        newMovies.push(result)
+    }
 
-    return movies
+    console.log(newMovies)
+    return newMovies
 })
 
 const initialState = {
@@ -45,7 +47,7 @@ reducers: {},
 extraReducers: {
     [fetchMoviesByName.pending]: (state, action) => {
         state.status = 'loading'
-      },
+    },
     [fetchMoviesByName.fulfilled]: (state, action) => {
     state.status = 'succeeded'
     // Add any fetched posts to the array

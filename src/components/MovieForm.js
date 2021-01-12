@@ -1,15 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
+import { useForm } from "react-hook-form";
 import { fetchMoviesByName } from '../app/moviesSlice'
 
 export default function MovieForm(){
 
     const dispatch = useDispatch()
+    const { handleSubmit } = useForm();
 
     const [movieName, changeMovieName] = useState('')
 
-    const handleChange = date => {
-        changeMovieName(data)
+    const handleChange = evt => {
+        changeMovieName(evt.target.value)
     }
 
     const onSubmit = () => {
@@ -18,7 +20,7 @@ export default function MovieForm(){
 
     return (
         <div>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <label>
                     Enter a Movie Name:
                     <input type="text" value={movieName} onChange={handleChange} />

@@ -29,6 +29,7 @@ async function findUser(client, user) {
         return result
     } else {
         console.log(`No user found`);
+        return false
     }
 }
 
