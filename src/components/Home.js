@@ -13,6 +13,7 @@ export default function Home(){
 
     return (
         <div className="home">
+            <div className="header">Search Movies By Name</div>
             {!accountStatus ? <CreateUserForm changeStatus={changeStatus}/> : null}
             {Object.keys(user).length === 0  && accountStatus ? <UserForm changeStatus={changeStatus}/> : null}
             {Object.keys(user).length !== 0  && accountStatus ? <MovieForm /> : null}

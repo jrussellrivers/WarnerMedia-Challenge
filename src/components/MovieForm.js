@@ -21,11 +21,11 @@ export default function MovieForm(){
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label>
+                <label className="form-label">
                     Enter a Movie Name:
-                    <input type="text" value={movieName} onChange={handleChange} />
+                    <input type="text" placeholder="Movie Name" value={movieName} onChange={handleChange} className="form-input"/>
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" className="form-submit"/>
             </form>
         </div>
     )

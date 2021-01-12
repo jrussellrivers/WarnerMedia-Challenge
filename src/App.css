@@ -9,6 +9,17 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
+  padding: 20px;
+}
+
+.header{
+  color: #e7e7e7;
+  margin: auto;
+  font-size: 50px;
+  border-bottom: 2px solid #e7e7e7;
+  padding-bottom: 40px;
+  max-width: 50%;
+  min-width: 375px;
 }
 
 .container{  
@@ -127,4 +138,71 @@ h1 {
   height: 400px;
   margin-left: -150px;
   margin-top: -225px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  border: thin solid #e7e7e7;
+  width: 30%;
+  color: #e7e7e7;
+  max-height: 250px;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 40px auto auto auto;
+  padding: 15px;
+  width: 300px;
+}
+
+.form-container{
+  display: inline-block;
+  flex-wrap: wrap;
+}
+
+.form-head{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form-label{
+  margin: 10px;
+}
+
+.form-input{
+  margin: 10px;
+  border: 0;
+  border-bottom: 2px solid #e7e7e7;
+  outline: 0;
+  color: #e7e7e7;
+  background: transparent;
+  padding: 3px;
+}
+
+.form-submit{
+  background-color: transparent;
+  color: #e7e7e7;
+  border:0.1em solid #e7e7e7;
+  padding:0.35em 1.2em;
+  border-radius:0.12em;
+  font-weight:300;
+}
+
+.form-submit:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+.redirect-button{
+  margin: 20px;
+  background-color: transparent;
+  color: #e7e7e7;
+  border:0.1em solid #FFFFFF;
+  padding:0.35em 1.2em;
+  border-radius:0.12em;
+  font-weight:300;
+}
+
+.redirect-button:hover{
+  color:#000000;
+  background-color:#FFFFFF;
 }

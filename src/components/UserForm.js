@@ -19,19 +19,20 @@ export default function UserForm({changeStatus}){
     };
 
     return (
-        <div>
+        <div className="form-container">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label>
+            <div className="form-head">Login</div>
+                <label className="form-label">
                     Enter Your Username:
-                    <input type="text" value={username} onChange={(evt)=>changeUsername(evt.target.value)} />
+                    <input type="text" className="form-input" placeholder="Username" value={username} onChange={(evt)=>changeUsername(evt.target.value)} />
                 </label>
-                <label>
+                <label className="form-label">
                     Enter Your Password:
-                    <input type="password" value={password} onChange={(evt)=>changePassword(evt.target.value)} />
+                    <input type="password" className="form-input" placeholder="Password" value={password} onChange={(evt)=>changePassword(evt.target.value)} />
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" className="form-submit"/>
             </form>
-            <button onClick={()=>changeStatus(false)}>Don't have an account? Register!</button>
+            <button className="redirect-button" onClick={()=>changeStatus(false)}>Don't have an account? Register!</button>
         </div>
     )
 }
