@@ -50,6 +50,7 @@ export default function Movie({movie}){
                         isOpen={modalIsOpen}
                         onRequestClose={closeModal}
                         className="modal"
+                        ariaHideApp={false}
                     >
                         <h3>MOVIE DETAILS</h3>
                         <p className="movie-description">{movie.description}</p>

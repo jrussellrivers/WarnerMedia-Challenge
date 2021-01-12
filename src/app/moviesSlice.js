@@ -45,7 +45,6 @@ export const fetchMoviesByName = createAsyncThunk('movies/fetchMoviesByName', as
         newMovies.push(movie)
     }
 
-    console.log(newMovies)
     return newMovies
 })
 
